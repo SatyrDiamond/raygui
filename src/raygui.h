@@ -1585,6 +1585,8 @@ static void UnloadCodepoints(int *codepoints);               // -- GuiLoadStyle(
 static unsigned char *DecompressData(const unsigned char *compData, int compDataSize, int *dataSize); // -- GuiLoadStyle()
 
 static Vector2 MeasureTextEx(Font font, const char *text, float fontSize, float spacing); // Measure string size for Font
+
+static void DrawTextCodepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint); // Draw one character (codepoint)
 //-------------------------------------------------------------------------------
 
 // raylib functions already implemented in raygui
@@ -5805,6 +5807,7 @@ static void GuiTooltip(Rectangle controlRec)
 {
     if (!guiLocked && guiTooltip && (guiTooltipPtr != NULL) && !guiControlExclusiveMode)
     {
+        // TODO: Remove MeasureTextEx(), implement logic directly or add custom GuiMeasureText()
         Vector2 textSize = MeasureTextEx(guiFont, guiTooltipPtr, (float)GuiGetStyle(DEFAULT, TEXT_SIZE),
             (float)GuiGetStyle(DEFAULT, TEXT_SPACING));
 
