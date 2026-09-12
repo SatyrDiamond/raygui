@@ -1,6 +1,6 @@
 /*******************************************************************************************
 *
-*   raygui v5.0 - A simple and easy-to-use immediate-mode gui library
+*   raygui v5.1-dev - A simple and easy-to-use immediate-mode gui library
 *
 *   DESCRIPTION:
 *       raygui is a tools-dev-focused immediate-mode-gui library based on raylib but also
@@ -145,6 +145,8 @@
 *           Draw text bounds rectangles for debug
 *
 *   VERSIONS HISTORY:
+*       6.0 (xx-xx-2027)  ADDED: Advance controls set?
+*
 *       5.0 (20-Jul-2026) ADDED: NEW control: GuiTabBar()
 *                         ADDED: Support up to 512 icons (v500)
 *                         ADDED: Support icons baking into font atlas image
@@ -353,9 +355,9 @@
 #define RAYGUI_H
 
 #define RAYGUI_VERSION_MAJOR 5
-#define RAYGUI_VERSION_MINOR 0
+#define RAYGUI_VERSION_MINOR 1
 #define RAYGUI_VERSION_PATCH 0
-#define RAYGUI_VERSION  "5.0"
+#define RAYGUI_VERSION  "5.1-dev"
 
 #if !defined(RAYGUI_STANDALONE)
     #include "raylib.h"
